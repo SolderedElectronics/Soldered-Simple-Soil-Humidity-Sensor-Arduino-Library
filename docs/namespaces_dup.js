@@ -1,4 +1,4 @@
 var namespaces_dup =
 [
-    [ "EASYC_SOLDERED_LIBS", "namespace_e_a_s_y_c___s_o_l_d_e_r_e_d___l_i_b_s.html", "namespace_e_a_s_y_c___s_o_l_d_e_r_e_d___l_i_b_s" ]
+    [ "SIMPLE_SOIL_SENSOR_EASYC", "namespace_s_i_m_p_l_e___s_o_i_l___s_e_n_s_o_r___e_a_s_y_c.html", "namespace_s_i_m_p_l_e___s_o_i_l___s_e_n_s_o_r___e_a_s_y_c" ]
 ];

@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['initializenative_0',['initializeNative',['../class_sensor.html#adb537c76173019fddf84b2d89e6c6559',1,'Sensor::initializeNative()'],['../class_e_a_s_y_c___s_o_l_d_e_r_e_d___l_i_b_s_1_1_easy_c.html#ac5e452bb3e1a549f4947bac4b5fe430e',1,'EASYC_SOLDERED_LIBS::EasyC::initializeNative()']]]
+  ['gethumidity_0',['getHumidity',['../class_simple_soil_sensor.html#a215d51aedd603a7454e01557081951da',1,'SimpleSoilSensor']]],
+  ['getresistance_1',['getResistance',['../class_simple_soil_sensor.html#a9121b3e67b460ded8b1995d93b98a3f8',1,'SimpleSoilSensor']]],
+  ['getvalue_2',['getValue',['../class_simple_soil_sensor.html#a3597365f0cc03a9cd1ae335592220615',1,'SimpleSoilSensor']]]
 ];

@@ -10,7 +10,7 @@
  * @authors     Goran Juric for Soldered.com
  ***************************************************/
 
-#include "Simple-light-sensor-easyC-SOLDERED.h"
+#include "Simple-soil-sensor-easyC-SOLDERED.h"
 
 // Declare the sensor object
 SimpleSoilSensor sensor;

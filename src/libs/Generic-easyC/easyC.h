@@ -5,12 +5,12 @@
  * @brief       Basic funtions for easyC libraries
  *
  *
- * @copyright GNU General Public License v3.0
- * @authors     @ soldered.com
+ * @copyright   GNU General Public License v3.0
+ * @authors     Goran Juric @ soldered.com
  ***************************************************/
 
-#ifndef __EASYC_LIBRARY__
-#define __EASYC_LIBRARY__
+#ifndef __EASYC_LIBRARY_SIMPLE_SOIL_SENSOR_
+#define __EASYC_LIBRARY_SIMPLE_SOIL_SENSOR_
 
 #include "Arduino.h"
 #include "Wire.h"
@@ -18,7 +18,7 @@
 #define ANALOG_READ_REG  0
 #define DIGITAL_READ_REG 1
 
-namespace EASYC_SOLDERED_LIBS
+namespace SIMPLE_SOIL_SENSOR_EASYC
 {
 
 class EasyC
@@ -46,6 +46,6 @@ class EasyC
     int readRegister(char regAddr, char a[], size_t n);
 };
 
-} // namespace EASYC_SOLDERED_LIBS
+} // namespace SIMPLE_SOIL_SENSOR_EASYC
 
 #endif

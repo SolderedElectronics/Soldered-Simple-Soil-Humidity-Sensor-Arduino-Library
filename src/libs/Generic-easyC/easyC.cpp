@@ -5,13 +5,13 @@
  * @brief       Basic funtions for easyC
  *
  *
- * @copyright GNU General Public License v3.0
- * @authors     @ soldered.com
+ * @copyright   GNU General Public License v3.0
+ * @authors     Goran Juric @ soldered.com
  ***************************************************/
 
 #include "easyC.h"
 
-namespace EASYC_SOLDERED_LIBS
+namespace SIMPLE_SOIL_SENSOR_EASYC
 {
 
 /**
@@ -117,4 +117,4 @@ int EasyC::sendData(const uint8_t *a, int n)
     return err = Wire.endTransmission();
 }
 
-} // namespace EASYC_SOLDERED_LIBS
+} // namespace SIMPLE_SOIL_SENSOR_EASYC

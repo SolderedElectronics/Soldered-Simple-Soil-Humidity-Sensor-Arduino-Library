@@ -1,16 +1,19 @@
 ##################################################
-# Syntax Coloring Map For Obstacle-Sensor-SOLDERED
+# Syntax Coloring Map simple-soil-sensor-soldered
 ##################################################
 
 ##################################################
-# Datatypes (KEYWORD1)
+# Datatypes 		(KEYWORD1)
 ##################################################
-
+SimpleSoilSensor		KEYWORD1
 ##################################################
 # Methods and Functions (KEYWORD2)
 ##################################################
 
-begin	KEYWORD2
+begin	    		  KEYWORD2
+getValue		    KEYWORD2
+getResistance		KEYWORD2
+getHumidity		    KEYWORD2
 
 ##################################################
 # Constants (LITERAL1)

@@ -84,5 +84,5 @@ float SimpleSoilSensor::getHumidity()
     {
         return 0;
     }
-    return - 0.65 * temp +116.2;
+    return -0.65 * temp + 116.2;
 }

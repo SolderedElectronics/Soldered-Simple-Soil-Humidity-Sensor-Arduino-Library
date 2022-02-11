@@ -86,3 +86,14 @@ float SimpleSoilSensor::getHumidity()
     }
     return -0.65 * temp + 116.2;
 }
+
+/**
+ * @brief       Function for calculating value of Soil humidity in percent
+ *
+ * @return      Soil humidity in percent
+ */
+void SimpleSoilSensor::calibrate(int _high, int _low)
+{
+    a = (_low - _high) / (90.0);
+    b = 10 - a * _high;
+}

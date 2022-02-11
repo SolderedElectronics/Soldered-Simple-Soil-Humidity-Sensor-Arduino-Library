@@ -1,22 +1,29 @@
 /**
  **************************************************
  *
- * @file        Read_values_easyC.ino
- * @brief       Example for using the digital and analog read functions for Simple light sensor with easyC
+ * @file        Read_values_native.ino
+ * @brief       Example for using the digital and analog read functions for Simple soil humidity sensor
  *
  *
- *	product: www.solde.red/333040
+ *  product: www.solde.red/333075
  *
  * @authors     Goran Juric for Soldered.com
  ***************************************************/
 
 #include "Simple-soil-sensor-easyC-SOLDERED.h"
 
-#define CALIBRATION_RESISTANCE_TIP_IN_WATER  160000
-#define CALIBRATION_RESISTANCE_FULL_IN_WATER  20000
+//Connecting diagram
+//Breakout      Arduino
+//|-------------|
+//OUT-----------A0
+//GND-----------GND
+//VCC-----------5V
 
-// Declare the sensor object
-SimpleSoilSensor sensor;
+#define ANALOG_PIN A0
+#define DIGITAL_PIN 9
+
+// Declare the sensor object and set pin on which sensor is connected
+SimpleLightSensor sensor(ANALOG_PIN);
 
 void setup()
 {
@@ -35,7 +42,6 @@ void setup()
     //pads are completely in water and write them in 
     //CALIBRATION_RESISTANCE_TIP_IN_WATER and CALIBRATION_RESISTANCE_FULL_IN_WATER
     sensor.calibrate(CALIBRATION_RESISTANCE_TIP_IN_WATER,CALIBRATION_RESISTANCE_FULL_IN_WATER);
-
 }
 
 void loop()

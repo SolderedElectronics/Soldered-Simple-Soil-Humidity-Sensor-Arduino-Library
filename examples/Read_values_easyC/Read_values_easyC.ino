@@ -44,7 +44,7 @@ void loop()
     Serial.println(sensor.getValue());  // Prints percent value of soil sensor
     
     Serial.print("Resistance of sensor: "); // Print information message
-    Serial.print(sensor.getResistance());  // Prints percent value of soil sensor
+    Serial.print(sensor.getResistance());  // Prints resistance of soil sensor
     Serial.println(" Ohms.");              // Print information message
 
     Serial.print("Light intensity: "); // Print information message

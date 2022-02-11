@@ -6,6 +6,7 @@
 | ![Simple soil humidity sensor](https://upload.wikimedia.org/wikipedia/commons/8/8f/Example_image.svg) |
 | :---------------------------------------------------------------------------------------------: |
 | [Simple soil humidity sensor board with easyC](https://www.solde.red/333040)                                                            |
+| [Simple soil humidity sensor board](https://www.solde.red/333075)                                                            |
 
 Simple soil humidity sensor compliant to [easyC ecosystem](https://www.soldered.com/easyC). 
 

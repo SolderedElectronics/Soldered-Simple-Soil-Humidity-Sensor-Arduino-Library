@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['easyc_0',['EasyC',['../class_s_i_m_p_l_e___s_o_i_l___s_e_n_s_o_r___e_a_s_y_c_1_1_easy_c.html#a9323a382df47bd4c86dbaeedde2d2322',1,'SIMPLE_SOIL_SENSOR_EASYC::EasyC']]]
+  ['calibrate_0',['calibrate',['../class_simple_soil_sensor.html#a7086233312cc9a1c94420ddea9218a22',1,'SimpleSoilSensor']]]
 ];

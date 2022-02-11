@@ -34,7 +34,7 @@ class SimpleSoilSensor : public SIMPLE_SOIL_SENSOR_EASYC::EasyC
   private:
     float a,b;
     int pin;
-    uint16_t ADC_width=1023;
+    uint16_t ADC_width = 1023;
     char raw[2];
 };
 

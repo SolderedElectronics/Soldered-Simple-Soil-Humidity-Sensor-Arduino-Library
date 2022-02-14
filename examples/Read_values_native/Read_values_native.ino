@@ -12,6 +12,9 @@
 
 #include "Simple-soil-sensor-easyC-SOLDERED.h"
 
+#define CALIBRATION_RESISTANCE_TIP_IN_WATER  160000
+#define CALIBRATION_RESISTANCE_FULL_IN_WATER  20000
+
 //Connecting diagram
 //Breakout      Arduino
 //|-------------|

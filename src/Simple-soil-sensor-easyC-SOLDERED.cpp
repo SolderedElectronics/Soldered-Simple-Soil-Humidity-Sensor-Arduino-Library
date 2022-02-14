@@ -43,7 +43,7 @@ void SimpleSoilSensor::initializeNative()
  *
  * @return      value of soil sensor
  */
-uint16_t SimpleSoilSensor::getValue()
+uint32_t SimpleSoilSensor::getValue()
 {
     if (!native)
     {
@@ -75,25 +75,30 @@ float SimpleSoilSensor::getResistance()
  */
 float SimpleSoilSensor::getHumidity()
 {
-    uint16_t temp = getResistance();
-    if (temp < 25000)
+    uint32_t temp = getResistance();
+    if (temp < low)
     {
         return 100;
     }
-    if (temp > 150000)
+    if (temp > high)
     {
         return 0;
     }
-    return -0.65 * temp + 116.2;
+    return a * temp + b;
 }
 
 /**
- * @brief       Function for calculating value of Soil humidity in percent
+ * @brief       Function for calibrating sensor
+ * 
+ * @param _high Calibration value for sensor in air
+ * 
+ * @param _low Calibration value for sensor fully in water
  *
- * @return      Soil humidity in percent
  */
 void SimpleSoilSensor::calibrate(int _high, int _low)
 {
-    a = (_low - _high) / (90.0);
+    high = _high;
+    low =  _low;
+    a =(90.0) / (_low - _high);
     b = 10 - a * _high;
 }

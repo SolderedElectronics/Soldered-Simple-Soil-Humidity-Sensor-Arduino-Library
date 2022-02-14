@@ -23,7 +23,6 @@
 //VCC-----------5V
 
 #define ANALOG_PIN A0
-#define DIGITAL_PIN 9
 
 // Declare the sensor object and set pin on which sensor is connected
 SimpleSoilSensor sensor(ANALOG_PIN);

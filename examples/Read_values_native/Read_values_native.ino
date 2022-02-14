@@ -23,7 +23,7 @@
 #define DIGITAL_PIN 9
 
 // Declare the sensor object and set pin on which sensor is connected
-SimpleLightSensor sensor(ANALOG_PIN);
+SimpleSoilSensor sensor(ANALOG_PIN);
 
 void setup()
 {

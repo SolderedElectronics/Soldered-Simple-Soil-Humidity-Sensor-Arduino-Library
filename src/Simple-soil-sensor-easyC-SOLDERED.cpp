@@ -89,16 +89,16 @@ float SimpleSoilSensor::getHumidity()
 
 /**
  * @brief       Function for calibrating sensor
- * 
+ *
  * @param _high Calibration value for sensor in air
- * 
+ *
  * @param _low Calibration value for sensor fully in water
  *
  */
 void SimpleSoilSensor::calibrate(int _high, int _low)
 {
     high = _high;
-    low =  _low;
-    a =(90.0) / (_low - _high);
+    low = _low;
+    a = (90.0) / (_low - _high);
     b = 10 - a * _high;
 }

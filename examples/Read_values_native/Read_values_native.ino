@@ -56,7 +56,7 @@ void loop()
     Serial.print(sensor.getResistance());  // Prints resistance of soil sensor
     Serial.println(" Ohms.");              // Print information message
 
-    Serial.print("Light intensity: "); // Print information message
+    Serial.print("Humidity: "); // Print information message
     Serial.print(sensor.getHumidity());     // Prints raw value of soil sensor
     Serial.println(" %.");           // Print information message
 

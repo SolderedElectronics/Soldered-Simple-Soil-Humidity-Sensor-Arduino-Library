@@ -23,7 +23,7 @@ class SimpleSoilSensor : public SIMPLE_SOIL_SENSOR_EASYC::EasyC
   public:
     SimpleSoilSensor();
     SimpleSoilSensor(int);
-    uint16_t getValue(void);
+    uint32_t getValue(void);
     float getResistance(void);
     float getHumidity(void);
     void calibrate(int, int);
@@ -32,7 +32,7 @@ class SimpleSoilSensor : public SIMPLE_SOIL_SENSOR_EASYC::EasyC
     void initializeNative();
 
   private:
-    float a, b;
+    float a, b, high = 160000, low=20000;
     int pin;
     uint16_t ADC_width = 1023;
     char raw[2];

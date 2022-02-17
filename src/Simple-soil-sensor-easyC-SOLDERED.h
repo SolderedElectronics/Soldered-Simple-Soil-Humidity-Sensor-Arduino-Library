@@ -18,7 +18,7 @@
 
 #define R 10000
 
-class SimpleSoilSensor : public SIMPLE_SOIL_SENSOR_EASYC::EasyC
+class SimpleSoilSensor : public EasyC
 {
   public:
     SimpleSoilSensor();

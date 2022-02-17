@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['begin_0',['begin',['../class_s_i_m_p_l_e___s_o_i_l___s_e_n_s_o_r___e_a_s_y_c_1_1_easy_c.html#a7ba8a6a8ae2545b814281ddea5c464fb',1,'SIMPLE_SOIL_SENSOR_EASYC::EasyC::begin()'],['../class_s_i_m_p_l_e___s_o_i_l___s_e_n_s_o_r___e_a_s_y_c_1_1_easy_c.html#a524db2f1c9d503600a89b5e0441354cd',1,'SIMPLE_SOIL_SENSOR_EASYC::EasyC::begin(uint8_t _address)']]]
+  ['begin_0',['begin',['../class_easy_c.html#a1b5a82b8a59daea79de76e496457e176',1,'EasyC::begin()'],['../class_easy_c.html#a9e71467da6f38cbe47b10e96694a4f91',1,'EasyC::begin(uint8_t _address)']]]
 ];

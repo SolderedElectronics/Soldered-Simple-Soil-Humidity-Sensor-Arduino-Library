@@ -27,6 +27,7 @@ class SimpleSoilSensor : public EasyC
     float getResistance(void);
     float getHumidity(void);
     void calibrate(int, int);
+    void setADCWidth(uint8_t);
 
   protected:
     void initializeNative();

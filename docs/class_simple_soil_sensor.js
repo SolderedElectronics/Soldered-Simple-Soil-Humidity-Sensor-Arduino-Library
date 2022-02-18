@@ -7,6 +7,7 @@ var class_simple_soil_sensor =
     [ "getResistance", "class_simple_soil_sensor.html#a9121b3e67b460ded8b1995d93b98a3f8", null ],
     [ "getValue", "class_simple_soil_sensor.html#a97a5080fe2fc2a9b5d8d128bccd8c19a", null ],
     [ "initializeNative", "class_simple_soil_sensor.html#a64caacd7688fdb3a862c5db9fcf7d256", null ],
+    [ "setADCWidth", "class_simple_soil_sensor.html#a3da50924d8193ef5282335d3cca01a63", null ],
     [ "a", "class_simple_soil_sensor.html#aed3826835aafbde2ddfbf0c2e6153904", null ],
     [ "ADC_width", "class_simple_soil_sensor.html#a78792640833ca503a46b7ed78c21f1e7", null ],
     [ "b", "class_simple_soil_sensor.html#aa4ec15aa3bafb4633e8af7b3b1fb5179", null ],

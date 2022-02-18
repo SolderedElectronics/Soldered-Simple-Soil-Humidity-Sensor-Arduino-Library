@@ -108,7 +108,7 @@ void SimpleSoilSensor::calibrate(int _high, int _low)
  *
  * @param       uint8_t _ADC_width ADC bit width in bits
  */
-void SimpleLightSensor::setADCWidth(uint8_t _ADC_width)
+void SimpleSoilSensor::setADCWidth(uint8_t _ADC_width)
 {
     ADC_width = pow(2, _ADC_width) - 1;
 }

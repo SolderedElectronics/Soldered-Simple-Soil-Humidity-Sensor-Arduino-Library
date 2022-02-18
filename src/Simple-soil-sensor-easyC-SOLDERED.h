@@ -13,12 +13,12 @@
 #define _SIMPLE_SOIL_SENSOR_EASYC_
 
 #include "Arduino.h"
-#include "libs/Generic-easyC/easyC.h"
+#include "libs/Generic-easyC/easyC.hpp"
 #include "math.h"
 
 #define R 10000
 
-class SimpleSoilSensor : public SIMPLE_SOIL_SENSOR_EASYC::EasyC
+class SimpleSoilSensor : public EasyC
 {
   public:
     SimpleSoilSensor();

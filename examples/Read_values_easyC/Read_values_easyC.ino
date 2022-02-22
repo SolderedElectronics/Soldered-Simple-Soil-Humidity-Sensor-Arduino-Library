@@ -10,6 +10,9 @@
  * @authors     Goran Juric for Soldered.com
  ***************************************************/
 
+//Connection diagram
+//Plug easyC cable
+
 #include "Simple-soil-sensor-easyC-SOLDERED.h"
 
 #define CALIBRATION_RESISTANCE_TIP_IN_WATER  160000

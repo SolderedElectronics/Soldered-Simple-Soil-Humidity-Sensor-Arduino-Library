@@ -47,8 +47,17 @@ uint32_t SimpleSoilSensor::getValue()
 {
     if (!native)
     {
-        readRegister(ANALOG_READ_REG, raw, 2 * sizeof(uint8_t));
-        return raw[0] | (raw[1]) << 8;
+        Wire.beginTransmission(address);
+        Wire.requestFrom(address, 2);
+
+        if (Wire.available())
+        {
+            Wire.readBytes(data, 2);
+        }
+        Wire.endTransmission();
+
+        resistance = *(uint16_t *)data;
+        return resistance;
     }
     return analogRead(pin);
 }
@@ -111,4 +120,21 @@ void SimpleSoilSensor::calibrate(int _high, int _low)
 void SimpleSoilSensor::setADCWidth(uint8_t _ADC_width)
 {
     ADC_width = pow(2, _ADC_width) - 1;
+}
+
+/**
+ * @brief       Function to set threshold value to turn on the LED
+ *
+ * @param       byte _threshold value in %
+ */
+void SimpleSoilSensor::setThreshold(byte _threshold)
+{
+    if (_threshold > 100)
+    {
+        return;
+    }
+    threshold = _threshold;
+    Wire.beginTransmission(address);
+    Wire.write(threshold);
+    Wire.endTransmission();
 }

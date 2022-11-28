@@ -28,6 +28,7 @@ class SimpleSoilSensor : public EasyC
     float getHumidity(void);
     void calibrate(int, int);
     void setADCWidth(uint8_t);
+    void setThreshold(byte);
 
   protected:
     void initializeNative();
@@ -36,7 +37,8 @@ class SimpleSoilSensor : public EasyC
     float a, b, high = 160000, low = 20000;
     int pin;
     uint16_t ADC_width = 1023;
-    char raw[2];
+    byte data[2], threshold;
+    uint16_t resistance;
 };
 
 #endif

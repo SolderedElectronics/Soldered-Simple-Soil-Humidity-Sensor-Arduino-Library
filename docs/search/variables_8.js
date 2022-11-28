@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['raw_0',['raw',['../class_simple_soil_sensor.html#af8c9af8f334b92bda0377b0d86ab2520',1,'SimpleSoilSensor']]]
+  ['resistance_0',['resistance',['../class_simple_soil_sensor.html#ab45f7d0a6fe192b4a39c7f2752f1d43f',1,'SimpleSoilSensor']]]
 ];

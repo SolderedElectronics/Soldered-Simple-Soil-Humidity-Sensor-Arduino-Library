@@ -25,7 +25,7 @@
 var NAVTREE =
 [
   [ "Simple soil humidity sensor easyC Library", "index.html", [
-    [ "Simple soil humidity sensor board with easyC Arduino library", "index.html", "index" ],
+    [ "Simple soil humidity sensor board Arduino library", "index.html", "index" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],

@@ -19,7 +19,7 @@ You can find hardware design for this board in *Simple soil humidity sensor boar
 
 ### Documentation
 
-Access Arduino library documentation [here](https://solderedelectronics.github.io/Soldered-Simple-Soil-Humidity-Sensor-Arduino-library/).
+Access Arduino library documentation [here](https://solderedelectronics.github.io/Soldered-Simple-Soil-Humidity-Sensor-Arduino-Library/).
 
 - Tutorial for using the Simple soil humidity sensor board
 - Installing an Arduino library

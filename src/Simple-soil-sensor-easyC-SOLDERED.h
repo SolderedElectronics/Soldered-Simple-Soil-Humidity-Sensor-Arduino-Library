@@ -6,7 +6,7 @@
  *
  *
  * @copyright   GNU General Public License v3.0
- * @authors     Goran Juric @ soldered.com
+ * @authors     Goran Juric, Karlo Leksic @ soldered.com
  ***************************************************/
 
 #ifndef _SIMPLE_SOIL_SENSOR_EASYC_
@@ -23,12 +23,14 @@ class SimpleSoilSensor : public EasyC
   public:
     SimpleSoilSensor();
     SimpleSoilSensor(int);
-    uint32_t getValue(void);
+    float getValue(void);
+    uint16_t getRawValue(void);
     float getResistance(void);
     float getHumidity(void);
     void calibrate(int, int);
     void setADCWidth(uint8_t);
-    void setThreshold(byte);
+    void setThreshold(float);
+    void setRawThreshold(uint16_t);
 
   protected:
     void initializeNative();
@@ -37,7 +39,8 @@ class SimpleSoilSensor : public EasyC
     float a, b, high = 160000, low = 20000;
     int pin;
     uint16_t ADC_width = 1023;
-    byte data[2], threshold;
+    byte data[2];
+    float threshold;
     uint16_t resistance;
 };
 

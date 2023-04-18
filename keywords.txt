@@ -12,9 +12,13 @@ SimpleSoilSensor	KEYWORD1
 
 begin	KEYWORD2
 getValue	KEYWORD2
+getRawValue	KEYWORD2
 getResistance	KEYWORD2
 getHumidity	KEYWORD2
 calibrate	KEYWORD2
+setADCWidth	KEYWORD2
+setThreshold	KEYWORD2
+setRawThreshold	KEYWORD2
 
 ##################################################
 # Constants (LITERAL1)

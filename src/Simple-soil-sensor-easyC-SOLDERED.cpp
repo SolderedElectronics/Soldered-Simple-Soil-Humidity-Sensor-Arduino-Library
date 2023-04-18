@@ -6,7 +6,7 @@
  *
  *
  * @copyright   GNU General Public License v3.0
- * @authors     Goran Juric @ soldered.com
+ * @authors     Goran Juric, Karlo Leksic @ soldered.com
  ***************************************************/
 
 
@@ -41,23 +41,33 @@ void SimpleSoilSensor::initializeNative()
 /**
  * @brief       Function for reading value of soil sensor
  *
- * @return      value of soil sensor
+ * @return      Value of soil sensor in percent (0 - 100%)
  */
-uint32_t SimpleSoilSensor::getValue()
+float SimpleSoilSensor::getValue()
+{
+    return (getRawValue() / float(1023) * 100);
+}
+
+
+/**
+ * @brief       Function for reading raw value of soil sensor
+ *
+ * @return      Raw value of soil sensor (0 - 1023)
+ */
+uint16_t SimpleSoilSensor::getRawValue(void)
 {
     if (!native)
     {
-        Wire.beginTransmission(address);
-        Wire.requestFrom(address, 2);
+        // Read 2 bytes of raw  data
+        char data[2];
+        readData(data, 2);
 
-        if (Wire.available())
-        {
-            Wire.readBytes(data, 2);
-        }
-        Wire.endTransmission();
+        // Convert it to uint16_t
+        uint16_t value = 0;
+        value = *(uint16_t *)data;
 
-        resistance = *(uint16_t *)data;
-        return resistance;
+        // Return converted value
+        return value;
     }
     return analogRead(pin);
 }
@@ -65,14 +75,14 @@ uint32_t SimpleSoilSensor::getValue()
 /**
  * @brief       Function for calculating resistance of soil sensor
  *
- * @return      resistance of soil sensor
+ * @return      Resistance of soil sensor
  */
 float SimpleSoilSensor::getResistance()
 {
-    uint16_t temp = getValue();
+    uint16_t temp = getRawValue();
     if (temp != 0)
     {
-        return R * temp / (float)(ADC_width - temp);
+        return R * (temp / (float)(ADC_width - temp));
     }
     return 0;
 }
@@ -123,18 +133,39 @@ void SimpleSoilSensor::setADCWidth(uint8_t _ADC_width)
 }
 
 /**
- * @brief       Function to set threshold value to turn on the LED
+ * @brief       Function to set threshold value in percentage to turn on the LED
  *
- * @param       byte _threshold value in %
+ * @param       float _threshold value in %
  */
-void SimpleSoilSensor::setThreshold(byte _threshold)
+void SimpleSoilSensor::setThreshold(float _threshold)
 {
-    if (_threshold > 100)
+    // Check if the threshold is the proper value
+    if (_threshold < 0 || _threshold > 100)
     {
         return;
     }
-    threshold = _threshold;
-    Wire.beginTransmission(address);
-    Wire.write(threshold);
-    Wire.endTransmission();
+
+    // Convert percentage threshold to raw value and send it
+    uint16_t rawThreshold = _threshold * 0.01 * 1024;
+    setRawThreshold(rawThreshold);
+}
+
+/**
+ * @brief       Function to set raw threshold value to turn on the LED
+ *
+ * @param       uint16_t _threshold from 0 to 1023 (raw)
+ */
+void SimpleSoilSensor::setRawThreshold(uint16_t _treshold)
+{
+    // Check if the threshold is the proper value
+    if (_treshold < 0 || _treshold > 1023)
+    {
+        return;
+    }
+
+    // Convert raw threshold value into 2 bytes for sending
+    uint8_t *rawThreshold = (uint8_t *)&_treshold;
+
+    // Send raw threshold
+    sendData(rawThreshold, 2);
 }
